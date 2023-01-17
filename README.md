@@ -3,9 +3,7 @@ Service that returns cut-off times for currency pairs on a given date.
 
 Technical coding task
 
-Create a RESTful service that can return cut-off1
-
-times for currency pairs on a given date.
+Create a RESTful service that can return cut-off times for currency pairs on a given date.
 
 Example:
 - CZK cannot be traded later than 11.00 today, and
