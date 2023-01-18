@@ -1,4 +1,4 @@
-# cut-off-service
+# Cut-Off Service
 Service that returns cut-off times for currency pairs on a given date.
 
 Technical coding task
@@ -17,3 +17,21 @@ Acceptance criteria:
 - API must be documented.
 
 [cut-off-times.xlsx](https://github.com/Justin-Hernandez/cut-off-service/files/10438792/cut-off-times.xlsx)
+
+<hr>
+
+# Solution
+
+Access API documentation available at http://localhost:8080/swagger-ui.html when the application is launched.
+![img_3.png](assets/img_3.png)
+
+Database diagram:
+
+![img.png](assets/img.png)
+
+The data is loaded to a h2 in-memory database every time the service is started with `src/resources/data.sql`.
+The cut-off times for *today* in the `cut_off_date` column are generated using the `curdate()` function, and `curdate() + INTERVAL '1' DAY` for *tomorrow*.
+
+![img_2.png](assets/img_2.png)
+
+![img_1.png](assets/img_1.png)
