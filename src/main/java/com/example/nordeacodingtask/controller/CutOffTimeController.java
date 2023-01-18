@@ -13,7 +13,6 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -100,7 +99,7 @@ public class CutOffTimeController {
                 cutOffTimeDTO.setTime(cuttOffTimeCurrencyA.getCutOffTime().toString());
             } else {
 
-                // if the window to trade currencyB <= currencyA
+                // if the window to trade currencyB < currencyA
                 cutOffTimeDTO.setTime(cuttOffTimeCurrencyB.getCutOffTime().toString());
             }
         }
